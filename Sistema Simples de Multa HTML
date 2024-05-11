@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+    <h1>Sistema De Multas</h1>
+    <div id = veri></div>
+</head>
+    Qual a velocidade do seu carro?<input type="text" id = velocidade>km/h
+    <input type="button" value="verificar" onclick="velo()">
+    <script>
+        function velo() {
+            var vel = document.getElementById("velocidade")
+            var vel2 = Number(vel.value)
+            if (vel2 >= 60) {
+                var velo2 = document.getElementById("veri")
+                var velo3 = Number(vel.value)
+                velo2.innerText = `Você estava à ${velo3}km/h! MULTADO!`
+            } else {
+                var velo2 = document.getElementById('veri')
+                velo2.innerText = 'Dirija sempre com segurança, tenha um bom dia'
+            }
+        }
+    </script>
+    <style>
+        div#veri {
+            position: relative;
+            bottom: -50px;
+        }
+    </style>
+<body>
+    
+</body>
+</html>
