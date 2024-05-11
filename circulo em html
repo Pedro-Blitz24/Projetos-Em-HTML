@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <h1>Trocar cor do quadrado</h1>
+    <p>ou transformar ele em um circulo</p>
+</head>
+    <div id = nada onmouseenter="circulo()" onmouseleave="fora()"></div>
+    <input type="text" id = caixa>
+    <button id = botao onclick="cor()">exec comand</button>
+    <style>
+        div#nada {
+            height: 200px;
+            width: 200px;
+            background: lightblue;
+            position: relative;
+            left: 250px;
+            bottom: -100px;
+        }
+        input#caixa {
+            position: relative;
+            left: 265px;
+            bottom: -120px;
+
+        }
+        button#botao {
+            position: relative;
+            left: 266px;
+            bottom: -120px;
+        }
+        p {
+            font: normal 15pt Arial;
+        }
+    </style>
+    <script>
+        function cor() {
+                var trocor = document.getElementById('nada')
+                entrada = document.getElementById('caixa')
+                trocor.style.background = String(entrada.value)
+    } 
+        function circulo() {
+            var circulo = document.getElementById("nada")
+            circulo.style.borderRadius = '50%'
+            circulo.style.transitionDuration = '0.5s'
+        }
+        function fora() {
+            var leave = document.getElementById('nada')
+            leave.style.borderRadius = '0%'
+        }
+    </script>
+<body>
+    
+</body>
+</html>
